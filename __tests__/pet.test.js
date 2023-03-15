@@ -17,3 +17,13 @@ describe('Pet has a name property', () => {
         expect(pet.name).toEqual('Fido');
     });
 });
+
+describe('prototype', () => {
+    it('causes the pet to age by 1', () => {
+        const pet = new Pet ('Fido');
+        pet.growUp();
+        pet.growUp();
+
+        expect(pet.age).toEqual(2);
+    });
+});
