@@ -1,3 +1,10 @@
-function Pet () {};
+function Pet (name) {
+    this.name = name
+};
 
-module.exports = Pet;
+const pet = new Pet ('Fido');
+
+module.exports = {
+    Pet,
+    pet
+};
