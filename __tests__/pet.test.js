@@ -1,7 +1,6 @@
 const { describe } = require('node:test');
 const {
-    Pet,
-    pet
+    Pet
  } = require('../src/pet');
 
 
@@ -13,6 +12,8 @@ describe('constructor', () => {
 
 describe('Pet has a name property', () => {
     it('returns the name of the specified pet', () => {
+        const pet = new Pet ('Fido');
+
         expect(pet.name).toEqual('Fido');
     });
 });
