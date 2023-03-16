@@ -10,7 +10,7 @@ describe('Pet has a name property', () => {
     it('returns the name of the specified pet', () => {
         const pet = new Pet('Fido');
 
-        expect(pet.name).toEqual('Fido');
+        expect(pet.name).toBe('Fido');
     });
 });
 
@@ -26,7 +26,7 @@ describe('growUp', () => {
         pet.growUp();
         pet.growUp();
 
-        expect(pet.age).toEqual(2);
+        expect(pet.age).toBe(2);
     });
 
     it('Throws an error if pet is dead', () => {
@@ -42,28 +42,28 @@ describe('growUp', () => {
 describe('hunger', () => {
     it('Has an initial hunger value of 0', () => {
         const pet = new Pet('Fido');
-        expect(pet.hunger).toEqual(0);
+        expect(pet.hunger).toBe(0);
     });
 
     it('growUp increases hunger by 5', () => {
         const pet = new Pet('Fido');
         pet.growUp();
 
-        expect(pet.hunger).toEqual(5);
+        expect(pet.hunger).toBe(5);
     });
 });
 
 describe('fitness', () => {
     it('Has an initial fitness value of 10', () => {
         const pet = new Pet('Fido');
-        expect(pet.fitness).toEqual(10);
+        expect(pet.fitness).toBe(10);
     });
 
     it('growUp decreases fitness by 3', () => {
         const pet = new Pet('Fido');
         pet.growUp();
 
-        expect(pet.fitness).toEqual(7);
+        expect(pet.fitness).toBe(7);
     });
 });
 
@@ -73,10 +73,10 @@ describe('walk', () => {
         pet.fitness = 4;
         pet.walk();
 
-        expect(pet.fitness).toEqual(8);
+        expect(pet.fitness).toBe(8);
         pet.walk();
 
-        expect(pet.fitness).toEqual(10);
+        expect(pet.fitness).toBe(10);
     });
 
     it('Throws an error if pet is dead', () => {
@@ -95,10 +95,10 @@ describe('feed', () => {
         pet.hunger = 5;
         pet.feed();
 
-        expect(pet.hunger).toEqual(2);
+        expect(pet.hunger).toBe(2);
         pet.feed();
 
-        expect(pet.hunger).toEqual(0);
+        expect(pet.hunger).toBe(0);
     });
 
     it('Throws an error if pet is dead', () => {
@@ -116,19 +116,19 @@ describe('checkUp', () => {
         const pet = new Pet('Fido');
         pet.hunger = 5;
 
-        expect(pet.checkUp()).toEqual('I am hungry');
+        expect(pet.checkUp()).toBe('I am hungry');
         pet.hunger = 0;
         pet.fitness = 3;
 
-        expect(pet.checkUp()).toEqual('I need a walk');
+        expect(pet.checkUp()).toBe('I need a walk');
         pet.hunger = 5;
         pet.fitness = 3;
 
-        expect(pet.checkUp()).toEqual('I am hungry AND I need a walk');
+        expect(pet.checkUp()).toBe('I am hungry AND I need a walk');
         pet.hunger = 0;
         pet.fitness = 10; 
 
-        expect(pet.checkUp()).toEqual('I feel great!');
+        expect(pet.checkUp()).toBe('I feel great!');
     });
 
     it('Throws an error if pet is dead', () => {
