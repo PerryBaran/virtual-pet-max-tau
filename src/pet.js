@@ -7,7 +7,8 @@ function Pet(name) {
     this.name = name,
     this.age = AGE_AT_BIRTH,
     this.hunger = NOT_HUNGRY,
-    this.fitness = MAXIMUM_FITNESS
+    this.fitness = MAXIMUM_FITNESS,
+    this.children = []
 };
 
 Pet.prototype = {
@@ -45,6 +46,13 @@ Pet.prototype = {
         : needsWalk ? 'I need a walk'
         : isHungry ? 'I am hungry'
         : 'I feel great!'
+    },
+    adoptChild(child) {
+        this.children.push(child)
+    },
+    haveBaby(baby) {
+        const birthChild = new Pet(baby);
+        this.children.push(birthChild)
     }
 };
 

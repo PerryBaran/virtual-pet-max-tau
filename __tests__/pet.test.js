@@ -166,3 +166,28 @@ describe('is alive', () => {
         expect(pet.isAlive).toBe(true);
     });
 });
+
+describe('has children', () => {
+    it('has a property of children', () => {
+        const pet = new Pet('Fido');
+
+        expect(pet.children).toBeInstanceOf(Array);
+        
+    });
+
+    it('is able to take another instance of Pet as a child', () => {
+        const pet = new Pet('Fido');
+        const pooch = new Pet('Pooch');
+        pet.adoptChild(pooch);
+
+        expect(pet.children).toContain(pooch);
+    });
+
+    it('gives birth to its own child', () => {
+        const pet = new Pet('Fido');
+        pet.haveBaby('Cornelius');
+
+        expect(pet.children[0]).toBeInstanceOf(Pet);
+        expect(pet.children[0].name).toBe('Cornelius')
+    })
+});
