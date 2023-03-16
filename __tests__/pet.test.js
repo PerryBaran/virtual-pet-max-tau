@@ -14,7 +14,7 @@ describe('Pet has a name property', () => {
     });
 });
 
-describe('aging', () => {
+describe('growUp', () => {
     it('Has an initial age of 0', () => {
         const pet = new Pet('Fido');
 
@@ -55,5 +55,31 @@ describe('fitness', () => {
         pet.growUp();
 
         expect(pet.fitness).toEqual(7);
+    });
+});
+
+describe('walk', () => {
+    it('increases fitness value by 4', () => {
+        const pet = new Pet('Fido');
+        pet.fitness = 4;
+        pet.walk();
+
+        expect(pet.fitness).toEqual(8);
+        pet.walk();
+
+        expect(pet.fitness).toEqual(10);
+    });
+});
+
+describe('feed', () => {
+    it('decreases hunger value by 3', () => {
+        const pet = new Pet('Fido');
+        pet.hunger = 5;
+        pet.feed();
+
+        expect(pet.hunger).toEqual(2);
+        pet.walk();
+
+        expect(pet.fitness).toEqual(0);
     });
 });
