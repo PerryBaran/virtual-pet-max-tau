@@ -28,6 +28,15 @@ describe('growUp', () => {
 
         expect(pet.age).toEqual(2);
     });
+
+    it('Throws an error if pet is dead', () => {
+        const pet = new Pet('Fido');
+        pet.age = 30;
+
+        expect(() => pet.growUp()).toThrow(
+            'Sorry, your pet has gone to live on the big farm in the sky'
+            );
+    });
 });
 
 describe('hunger', () => {
@@ -69,6 +78,15 @@ describe('walk', () => {
 
         expect(pet.fitness).toEqual(10);
     });
+
+    it('Throws an error if pet is dead', () => {
+        const pet = new Pet('Fido');
+        pet.fitness = 0;
+
+        expect(() => pet.walk()).toThrow(
+            'Sorry, your pet has gone to live on the big farm in the sky'
+            );
+    });
 });
 
 describe('feed', () => {
@@ -81,6 +99,15 @@ describe('feed', () => {
         pet.feed();
 
         expect(pet.hunger).toEqual(0);
+    });
+
+    it('Throws an error if pet is dead', () => {
+        const pet = new Pet('Fido');
+        pet.hunger = 10;
+
+        expect(() => pet.feed()).toThrow(
+            'Sorry, your pet has gone to live on the big farm in the sky'
+            );
     });
 });
 
@@ -102,6 +129,25 @@ describe('checkUp', () => {
         pet.fitness = 10; 
 
         expect(pet.checkUp()).toEqual('I feel great!');
+    });
+
+    it('Throws an error if pet is dead', () => {
+        const pet = new Pet('Fido');
+        pet.fitness = 0;
+
+        expect(() => pet.checkUp()).toThrow(
+            'Sorry, your pet has gone to live on the big farm in the sky'            );
+            pet.fitness = 1;
+            pet.hunger = 10;
+
+        expect(() => pet.checkUp()).toThrow(
+            'Sorry, your pet has gone to live on the big farm in the sky'            );
+            pet.hunger = 9;
+            pet.age = 30;
+
+        expect(() => pet.checkUp()).toThrow(
+            'Sorry, your pet has gone to live on the big farm in the sky'
+            );
     });
 });
 
