@@ -78,8 +78,8 @@ describe('feed', () => {
         pet.feed();
 
         expect(pet.hunger).toEqual(2);
-        pet.walk();
+        pet.feed();
 
-        expect(pet.fitness).toEqual(0);
+        expect(pet.hunger).toEqual(0);
     });
 });
