@@ -46,6 +46,6 @@ Use the following methods to interact with your pet:
 * `.adoptChild(child)` (enables your pet to adopt a child, whose name must be passed as an argument in the method);
 * `.haveBaby(baby)` (causes the pet to have a baby, whose name must be passed as an argument in the method)
 
-Your pet will have a maximum fitness and maximum hunger of 10, maximum age of 30. If your pet's fitness reaches 0, hunger reaches 10 or age reaches 30, it will pass away.
+:warning: Your pet will have a maximum fitness and maximum hunger of 10, maximum age of 30. If your pet's fitness reaches 0, hunger reaches 10 or age reaches 30, it will pass away. :warning:
 
 Have fun and look after your pet!
