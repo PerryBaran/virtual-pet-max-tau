@@ -188,6 +188,7 @@ describe('has children', () => {
         pet.haveBaby('Cornelius');
 
         expect(pet.children[0]).toBeInstanceOf(Pet);
+        
         expect(pet.children[0].name).toBe('Cornelius')
     })
 });
