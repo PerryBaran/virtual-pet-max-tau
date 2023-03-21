@@ -29,7 +29,7 @@ The Virtual Pet will be able to:
 
 ## How to use it
 
-Give your pet a name by creating a new variable from the Pet constructor with your chosen name passed as the argument, e.g. `const Mog = new Pet ('Mog')`
+Give your pet a name by creating a new variable from the Pet constructor with your chosen name passed as the argument, e.g. `const Mog = new Pet ('Mog')` :cat2:
 
 Congratulations! Your new pet will be born with the following properties:
 * name (set by you as shown above);
