@@ -32,11 +32,11 @@ The Virtual Pet will be able to:
 Give your pet a name by creating a new variable from the Pet constructor with your chosen name passed as the argument, e.g. `const Mog = new Pet ('Mog')`
 
 Congratulations! Your new pet will be born with the following properties:
-name (set by you as shown above);
-age (set to 0 to begin with);
-hunger (set to 0 to begin with);
-fitness (set to 10 to begin with);
-children (an empty array to begin with)
+* name (set by you as shown above);
+* age (set to 0 to begin with);
+* hunger (set to 0 to begin with);
+* fitness (set to 10 to begin with);
+* children (an empty array to begin with)
 
 Use the following methods to interact with your pet:
 * `.growUp()` (causes the pet's age to increase by 1, hunger to increase by 5 and fitness to decrease by 3);
